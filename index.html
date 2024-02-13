@@ -1,0 +1,4 @@
+<script type="module">
+  const compiler = await WebAssembly.instantiateStreaming(fetch('dist/compiler.wasm'));
+  console.log(compiler.instance.exports.sum(1, 2));
+</script>
